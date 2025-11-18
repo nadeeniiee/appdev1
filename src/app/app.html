@@ -1,22 +1,22 @@
 <div style="text-align:center; margin-top:20px;">
   <h1>{{ title() }}</h1>
+
+
   <!-- Add Student Area-->
+  
   <input type="text" [value]="studentName()"
-  (input)="studentName.set($any($event.target).value)" placeholder="Name">
+  (input)="studentName.set($any($event.target).value)" placeholder="Name"><br><br>
   <input type="number" [value]="studentAge()"
-  (input)="studentAge.set($any($event.target).valueAsNumber)" placeholder="Age">
+  (input)="studentAge.set($any($event.target).valueAsNumber)" placeholder="Age"><br><br>
   <input type="text" [value]="studentCourse()"
-  (input)="studentCourse.set($any($event.target).value)" placeholder="Course">
-  <button (click)="addStudent()">Add Student</button>
+  (input)="studentCourse.set($any($event.target).value)" placeholder="Course"><br><br>
+  <input type="text" [value]="studentUsername()"
+  (input)="studentName.set($any($event.target).value)" placeholder="Username"><br><br>
+  <input type="text" [value]="studentEmail()"
+  (input)="studentEmail.set($any($event.target).value)" placeholder="Email"><br><br>
+  <input type="password" [value]="studentPassword()"
+  (input)="studentPassword.set($any($event.target).value)" placeholder="Password"><br><br>
+  <button (click)="addStudent()">Register</button>
   <hr>
-  <!-- List Students Area-->
-  <div *ngFor="let student of students" style="margin-bottom:10px;">
-  <input [value]="student.name" (input)="student.name = $any($event.target).value">
-  <input type="number" [value]="student.age" (input)="student.age =
-  $any($event.target).valueAsNumber">
-  <input [value]="student.course" (input)="student.course = $any($event.target).value">
-  <button (click)="updateStudent(student.id, student.name,
-  student.age,student.course)">Update</button>
-  <button (click)="deleteStudent(student.id)">Delete</button>
-  </div>
+
   </div>
